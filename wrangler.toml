@@ -4,6 +4,8 @@ compatibility_flags = [ "nodejs_compat" ]
 
  [vars]
 DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMWI3YTA0ZDYtOWZiMS00MzczLWI3MDktMTZmYzhkZjQ2YWVlIiwidGVuYW50X2lkIjoiNTU5Mjk3NGI5NjhjOWU1MjQ0YjZjNjlmZTc1MThjM2JmZmE2MjQ1ODk1ZGZiNDVkZDc2YjY2ZmRhMWM5ZjVjYyIsImludGVybmFsX3NlY3JldCI6ImQ4M2Y0YTgyLTM4NTQtNDI1Zi04YzlkLTU4MTg4ZjEwY2IzZiJ9.RRzw0GU0GHZ2jJFvR1jCif2v_4BNM2zzdhYBT_2BeZ0"
+JWT_SECRET="ashdjhs"
+
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
