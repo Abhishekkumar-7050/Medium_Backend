@@ -15,8 +15,8 @@ export const blogRouter = new Hono<{
 }
 
 }>();
-
-blogRouter.use(async (c, next) => {
+ 
+blogRouter.use( "/* ",async (c, next) => {
     const jwt = c.req.header('Authorization');
 	if (!jwt) {
 		c.status(401);
@@ -86,6 +86,28 @@ blogRouter.get('/:id', async (c) => {
 	});
 
 	return c.json(post);
+})
+
+
+blogRouter.get('/bulk', async(c)=>{
+
+    const prisma = new PrismaClient({
+		datasourceUrl: c.env?.DATABASE_URL	,
+	}).$extends(withAccelerate());
+	
+    try {
+         const  post = await prisma.post.findMany();
+
+         return c.json({
+            post
+         })
+    
+    } catch (error) {
+        
+    }
+
+
+
 })
 
 
